@@ -1,0 +1,24 @@
+<div class="row">
+    <h3 class="col-md-8 ">{{title}}</h3>
+</div>
+<div class="row">
+<div class="col-md-4" *ngFor="let item of items">
+  <div class="card border border-default mb-3" id={{item._id}}>
+      <h5 class="card-header">{{item.fname}}  {{item.lname}}</h5>
+
+      <div class="card-body text-default">
+          <p>Email: {{item.email}} <br />
+              Phone: {{item.phone}} <br />
+              City: {{item.city}} <br />
+              State: <b class="text-danger">{{item.state}} </b><br />
+              Zipcode: {{item.zip}} <br />
+              Status: {{item.check}} </p>
+      </div>
+      <div class="card-footer text-center bg-transparent border-default">
+          <a href="/itemdetail/item.id" class="btn btn-success text-white btn-sm">Detail</a>
+          <a href="/edititem/item.id" class="btn btn-info text-white btn-sm">Edit</a>
+          <a onclick="deleteMe('item.id')" class="btn text-white btn-danger btn-sm">Delete</a>
+      </div>
+  </div>
+</div>
+</div>
